@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(204, 43%, 93%);
+    padding: 30px;
+}
+.price-grid{
+    width: 600px;
+}
+.second-row .left-col{
+    background-color: hsl(179, 62%, 43%);
+    flex: 1;
+    padding: 20px;
+    height: 200px;
+    border-bottom-left-radius: 5px;
+}
+.second-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.second-row .right-col{
+    flex: 1;
+    padding: 20px;
+    background-color: hsl(179, 55%, 59%);
+    height: 200px;
+    border-bottom-right-radius: 5px;
+}
+.first-row{
+    padding: 20px;
+    height: 200px;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+.first-row h1{
+    color: hsl(179, 62%, 43%);
+}
+.first-row h2{
+    color: hsl(71, 73%, 54%);
+    margin-top: 20px;
+}
+.first-row p{
+    color: hsl(218, 22%, 67%);
+    margin: 10px 0;
+}
+.second-row{
+    color: white;
+}
+.second-row p{
+    color: hsl(179, 70%, 85%);
+    margin: 10px 0;
+}
+.sign-btn{
+    width: 100%;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border: none;
+    height: 40px;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px #575757;
+    transition: all .3s;
+    cursor: pointer;
+}
+.sign-btn:hover{
+    box-shadow: 0 0 0;
+    transform: translateY(3px);
+}
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.price span{
+    color: hsl(179, 54%, 59%);
+}
+@media(max-width:728px){
+    body{
+        min-height: 120vh;
+    }
+    .price-grid{
+        width: 300px;
+        font-size: small;
+        margin: 20px;
+    }
+    .second-row{
+        flex-direction: column;
+    }
+    .second-row .left-col,
+    .second-row .right-col{
+        width: 300px;
+        min-height: 200px;
+        border-radius: 0;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .second-row .right-col{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+@media(max-width:330px){
+    body{
+        min-height: 130vh;
+        padding: 30px;
+    }
+    .first-row h1{
+        font-size: 15px;
+    }
+    .first-row h2{
+        margin: 0;
+        font-size: 13px;
+    }
+    .price-grid{
+        width: 200px;
+        font-size: small;
+        height: 100%;
+    }
+    .second-row .left-col,
+    .second-row .right-col{
+        width: 200px;
+        min-height: 250px;
+        border-radius: 0;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
